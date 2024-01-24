@@ -1,0 +1,100 @@
+@use 'vars.scss' as *;
+@use 'colors.scss' as *;
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border-radius: $border-radius;
+    border: 1px solid $gray-dark;
+
+    gap: $spacing;
+
+    background: $gray-darker;
+
+    cursor: pointer;
+
+    transition: $transition;
+
+    min-width: 200px;
+    min-height: 200px;
+    pointer-events: none;
+
+    .image-content {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: $spacing;
+        pointer-events: auto;
+
+        .image {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            border-radius: $border-radius;
+
+            padding: $spacing;
+            padding-bottom: 0;
+        }
+
+        .image-details {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: $spacing;
+        }
+    }
+
+    .image-controls {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: $spacing;
+
+        border-top: 1px solid $gray-dark;
+
+        padding: $spacing;
+        padding-top: $spacing;
+
+        pointer-events: auto;
+
+        cursor: default;
+
+
+        .icon {
+            cursor: pointer;
+        }
+
+        .delete-icon {
+            color: $red;
+        }
+
+        .image-select-icon {
+            color: $gray-light;
+        }
+
+        .select-icon-selected {
+            color: $blue;
+        }
+    }
+}
+
+.image-container:hover {
+    border: 1px solid $gray-light;
+}
+
+.image-container:active {
+    background: $gray-dark;
+}

@@ -1,0 +1,81 @@
+@use 'vars.scss' as *;
+@use 'colors.scss' as *;
+
+.button {
+    display: flex;
+    flex-direction: row;
+
+    gap: $spacing;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: $transition;
+
+    width: 100%;
+    height: 50px;
+
+    border: 1px solid transparent;
+
+    border-radius: $border-radius;
+
+    padding: $spacing;
+
+    cursor: pointer;
+
+    .button-label {}
+}
+
+.button-default {
+    background: $gray-dark;
+}
+
+.button-default:hover {
+    background: $gray;
+}
+
+.button-default:active {
+    background: $gray-light;
+}
+
+.button-danger {
+    background: $red;
+}
+
+.button-danger:hover {
+    border-color: $red;
+
+    background: rgba($red, 0.6);
+}
+
+.button-danger:active {
+    background: rgba($red, 0.8);
+}
+
+.button-success {
+    background: $green;
+}
+
+.button-success:hover {
+    border-color: $green;
+
+    background: rgba($green, 0.6);
+}
+
+.button-success:active {
+    background: rgba($green, 0.8);
+}
+
+.button-primary {
+    background: $blue;
+}
+
+.button-primary:hover {
+    border-color: $blue;
+
+    background: rgba($blue, 0.6);
+}
+
+.button-primary:active {
+    background: rgba($blue, 0.8);
+}

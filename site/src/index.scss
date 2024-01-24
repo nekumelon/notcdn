@@ -1,0 +1,22 @@
+@use 'colors.scss' as *;
+
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: inherit;
+    font-size: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: $gray-darkest;
+    color: $white-light;
+}

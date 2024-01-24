@@ -1,0 +1,45 @@
+@use 'vars.scss' as *;
+@use 'colors.scss' as *;
+
+.image-view-container {
+    width: 100%;
+    height: 100%;
+
+    padding: $spacing-large;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: $spacing;
+
+    .image {
+        width: 100%;
+        height: 100%;
+
+        max-height: calc(100vh - 200px); // cursed, fix pls
+
+        object-fit: contain;
+
+        border-radius: $border-radius;
+        border: 1px solid $gray-dark;
+    }
+
+    .image-details {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .image-options {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: $spacing;
+    }
+}

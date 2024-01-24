@@ -1,0 +1,65 @@
+@use 'vars.scss' as *;
+@use 'colors.scss' as *;
+
+.home {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: $spacing;
+
+    .no-images {
+        padding: $spacing-medium;
+    }
+
+    .home-controls {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: $spacing;
+
+        background: $gray-darker;
+
+        border: 1px solid $gray-dark;
+
+        padding: $spacing;
+        padding-inline: $spacing-medium;
+
+        width: 100%;
+        height: 50px;
+
+        .icon {
+            cursor: pointer;
+            color: $gray-light;
+
+            transition: $transition;
+        }
+
+        .icon:hover {
+            color: $white;
+        }
+
+        .delete-icon {
+            color: $red;
+        }
+
+        .delete-icon:hover {
+            color: $red;
+        }
+    }
+
+    .images {
+        display: grid;
+        padding: $spacing-medium;
+
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: $spacing;
+
+        align-items: flex-start;
+    }
+}
